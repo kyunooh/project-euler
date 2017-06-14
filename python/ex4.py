@@ -1,6 +1,4 @@
-import time
-
-import test
+from python import test
 
 
 def get_max_palindrome_number(palindrome_number):
