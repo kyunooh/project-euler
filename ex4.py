@@ -1,5 +1,7 @@
 import time
 
+import test
+
 
 def get_max_palindrome_number(palindrome_number):
     if not palindrome_number:
@@ -19,7 +21,7 @@ def is_palindrome_number(n):
     return int_list == int_list[::-1]
 
 
-def get_answer(palindrome_number):
+def get_answer(palindrome_number=None):
     if not palindrome_number:
         palindrome_number = get_max_palindrome_number(0)
 
@@ -37,30 +39,4 @@ def get_answer(palindrome_number):
     return palindrome_number
 
 
-assert(is_palindrome_number(1))
-assert(not is_palindrome_number(13))
-assert(is_palindrome_number(11))
-assert(is_palindrome_number(9009))
-assert(not is_palindrome_number(9909))
-
-startTime = time.time()
-for i in range(0, 100):
-    print(get_answer(0))
-endTime = time.time()
-print(endTime - startTime)
-
-
-def get_max_palindromes():
-    found = False
-    palindromes = []
-    for i in range(1000, 100, -1):
-        for j in range(1000, 100, -1):
-            if is_palindrome_number(i * j): found = True; break
-        if found: palindromes.append(i*j)
-    print(max(palindromes))
-
-startTime = time.time()
-for i in range(0, 100):
-    get_max_palindromes()
-endTime = time.time()
-print(endTime - startTime)
+test.running_time(get_answer)
