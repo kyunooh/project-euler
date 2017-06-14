@@ -1,3 +1,5 @@
+import test
+
 def get_answer():
     fibonacci_list = get_fibonacci_list()
     fibonacci_list_sum = sum(filter(lambda x: x % 2 == 0, fibonacci_list))
@@ -18,4 +20,4 @@ def get_fibonacci_list(under=4000000):
 def next_fibonacci(first, second):
     return first + second
 
-print(get_answer())
+test.running_time(get_answer)

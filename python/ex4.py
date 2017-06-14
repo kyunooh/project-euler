@@ -1,4 +1,4 @@
-from python import test
+import test
 
 
 def get_max_palindrome_number(palindrome_number):

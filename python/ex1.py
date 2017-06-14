@@ -1,4 +1,4 @@
-from python import test
+import test
 
 
 def get_answer(final_number=1000):
